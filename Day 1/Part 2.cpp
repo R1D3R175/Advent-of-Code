@@ -9,7 +9,7 @@ int main(){
 
     in >> x >> y >> z;
 
-    for(int i = 0; i < 1997; i++) { // 1997 we already took 3 input variables before the for cycle
+    for(int i = 0; i < 1997; i++) { // 1997 because we already took 3 input variables before the for cycle
         tmp1 = x + y + z;
         
         x = y;                          
