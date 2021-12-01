@@ -18,4 +18,7 @@ int main() {
     }
     
     out << c;
+
+    in.close();
+    out.close();
 }
