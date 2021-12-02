@@ -18,7 +18,6 @@ int main() {
             a -= i;
         else
             a += i;
-        
     }
 
     out << x * y;
