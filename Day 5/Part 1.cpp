@@ -83,7 +83,7 @@ int main()
 	while (getline(in, line))
 	{
 		i = 0;
-		while (line[i] != '-') 
+		while (line[i] != '-')
 			++i;
 
 		start.emplace_back(getter(line.substr(0, i - 1)));
