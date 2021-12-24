@@ -1,19 +1,21 @@
 #include <fstream>
 using namespace std;
 
-int main() {
+int main()
+{
     ifstream in("input.txt");
     ofstream out("output.txt");
 
     string s;
     int i;
 
-    int x = 0, y = 0;   
+    int x = 0, y = 0;
 
-    while(in >> s >> i) {
-        if(s == "forward")
+    while (in >> s >> i)
+    {
+        if (s == "forward")
             x += i;
-        else if(s == "up") 
+        else if (s == "up")
             y -= i;
         else
             y += i;
