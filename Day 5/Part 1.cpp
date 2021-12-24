@@ -53,8 +53,8 @@ void filler(vector<vector<int>> &m, Coord c1, Coord c2, int &c)
 	{
 		for (int i = c1.first; i <= c2.first; ++i)
 		{
-			m[c1.second][i]++;
-			if (m[c1.second][i] == 2)
+			m[i][c1.second]++;
+			if (m[i][c1.second] == 2)
 				++c;
 		}
 	}
@@ -62,8 +62,8 @@ void filler(vector<vector<int>> &m, Coord c1, Coord c2, int &c)
 	{
 		for (int i = c1.second; i <= c2.second; ++i)
 		{
-			m[i][c1.first]++;
-			if (m[i][c1.first] == 2)
+			m[c1.first][i]++;
+			if (m[c1.first][i] == 2)
 				++c;
 		}
 	}
