@@ -1,3 +1,5 @@
+#include <iostream>
+
 template <typename T, typename K>
 void print_pair(std::pair<T, K> const &p)
 {
