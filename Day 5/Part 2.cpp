@@ -3,8 +3,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "../debug_print.h"
-
 using namespace std;
 
 typedef pair<int, int> Coord;
@@ -52,13 +50,15 @@ void filler(vector<vector<int>> &m, Coord c1, Coord c2, int &c)
 				 (i < c2.first) ? (++i) : (--i), (j < c2.second) ? (++j) : (--j))
 			{
 				m[i][j]++;
-				if (m[i][j] == 2)
+				if (m[i][j] == 2) {
 					++c;
+				}
 			}
 
 			m[c2.first][c2.second]++;
-			if (m[c2.first][c2.second] == 2)
+			if (m[c2.first][c2.second] == 2) {
 				++c;
+			}
 
 			return;
 		}
@@ -70,8 +70,8 @@ void filler(vector<vector<int>> &m, Coord c1, Coord c2, int &c)
 	{
 		for (int i = c1.first; i <= c2.first; ++i)
 		{
-			m[c1.second][i]++;
-			if (m[c1.second][i] == 2)
+			m[i][c1.second]++;
+			if (m[i][c1.second] == 2)
 				++c;
 		}
 	}
@@ -79,8 +79,8 @@ void filler(vector<vector<int>> &m, Coord c1, Coord c2, int &c)
 	{
 		for (int i = c1.second; i <= c2.second; ++i)
 		{
-			m[i][c1.first]++;
-			if (m[i][c1.first] == 2)
+			m[c1.first][i]++;
+			if (m[c1.first][i] == 2)
 				++c;
 		}
 	}
@@ -120,8 +120,6 @@ int main()
 
 	for (int i = 0; i < start.size(); ++i)
 		filler(m, start[i], end[i], r);
-
-	print_mat(m);
 
 	out << r;
 
