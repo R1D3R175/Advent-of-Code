@@ -7,3 +7,7 @@ codes created to solve AoC's problems
 - [andrexlenx](https://github.com/andrexlenx)
 
 > Formerly known as Yellow Radiators
+
+## Possible optimizations
+*I didn't write these since it will take more time than a simple solution, both in writing and thinking process*
+- **Day 8:** We could optimize the following codes by not storing data into vectors since we don't really need it after checking the length or calculating the value of the digit.
