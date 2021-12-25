@@ -4,7 +4,8 @@
 #include <sstream>
 using namespace std;
 
-void get_input(ifstream& in, vector<int> &f) {
+void get_input(ifstream &in, vector<int> &f)
+{
     string input;
     in >> input;
 
@@ -13,10 +14,12 @@ void get_input(ifstream& in, vector<int> &f) {
     stringstream n(input);
 
     int x;
-    while(n >> x) f.push_back(x);
+    while (n >> x)
+        f.push_back(x);
 }
 
-int main() {
+int main()
+{
     ifstream in("input.txt");
     ofstream out("output.txt");
 
@@ -24,11 +27,15 @@ int main() {
 
     get_input(in, fish);
 
-    for(int i = 0; i < 80; ++i) {
+    for (int i = 0; i < 80; ++i)
+    {
         int N = fish.size();
 
-        for(int f = 0; f < N; ++f) {
-            if(fish[f] == 0) {
+        for (int f = 0; f < N; ++f)
+        {
+
+            if (fish[f] == 0)
+            {
                 fish.push_back(8);
                 fish[f] = 6;
                 continue;
