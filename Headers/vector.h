@@ -1,4 +1,6 @@
-#include <iostream>
+#ifndef _VECTOR_
+#include <vector>
+#endif
 
 template <typename T, typename K>
 void print_pair(std::pair<T, K> const &p)
@@ -32,13 +34,3 @@ void print_mat(std::vector<std::vector<T>> const &m)
     std::cout << "\n<--------------- [DEBUG] print_mat --------------->\n\n";
 }
 
-template <typename T, typename K>
-void print_umap(std::unordered_map<T, K> const &um)
-{
-    std::cout << "\n<--------------- [DEBUG] print_umap --------------->\n";
-    for (auto const &p : um)
-    {
-        std::cout << p.first << " - " << p.second << std::endl;
-    }
-    std::cout << "<--------------- [DEBUG] print_umap --------------->\n\n";
-}
